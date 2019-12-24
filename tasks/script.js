@@ -33,7 +33,7 @@ gulp.task('scripts',()=>{
 		.pipe(gulpWebpack({  /*对文件进行编译，3个参数，第一个参数是编译相应的文件，
 													第二个是null，第三个是对错误进行一个处理*/
 			module:{
-				loaders:[{
+				rules:[{
 					test:/\.js$/,  //如果遇到.js文件，用babel这个loader去处理
 					loader:'babel-loader'//这里还需要装三个依赖包，babel-loader、babel-core、babel-preset-env
 				}]
