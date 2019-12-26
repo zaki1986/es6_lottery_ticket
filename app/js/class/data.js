@@ -442,5 +442,51 @@ let category = {
   }
 };
 
-  let arr = Array.from(Object.values(category));
-  console.log(arr);
+let menu = document.getElementById('menu');
+let arr = Array.from(Object.values(category));
+var level_1 = [],
+  level_2 = [],
+  level_3 = [],
+  level_4 = [];
+console.log('Old:', arr);
+
+for (let item of arr) {
+  if (item.level == 1) {
+    //menu.innerHTML+= `<li><a name="${item.value}" href="${item.path}">${item.label}</a></li>`;
+    level_1.push(item)
+  } else if (item.level == 2) {
+    level_2.push(item)
+  } else if (item.level == 3) {
+    level_3.push(item)
+  } else if (item.level == 4) {
+    level_4.push(item)
+  }
+}
+
+
+for (let item3 of level_3) {
+  for (let item4 of level_4) {
+    if (item3.value == item4.parent) {
+      item3.children = item4;
+    }
+  }
+}
+
+for (let item2 of level_2) {
+  for (let item3 of level_3) {
+    if (item2.value == item3.parent) {
+      item2.children = item3;
+    }
+  }
+}
+
+for (let item1 of level_1) {
+  for (let item2 of level_2) {
+    if (item1.value == item2.parent) {
+      item1.children = item2;
+    }
+  }
+}
+
+let arrNew = Array.from(Object.values(level_1));
+console.log('New:', arrNew)

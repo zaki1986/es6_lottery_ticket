@@ -1,2 +1,2 @@
 //import 'babel-polyfill'; //ES2017 一些字符串扩展方法补丁
-import './class/lession6';
+import './class/data';
