@@ -444,10 +444,7 @@ let category = {
 
 let menu = document.getElementById('menu');
 let arr = Array.from(Object.values(category));
-var level_1 = [],
-  level_2 = [],
-  level_3 = [],
-  level_4 = [];
+var level_1 = [] ,level_2 = [] ,level_3 = [] ,level_4 = [];
 console.log('Old:', arr);
 
 for (let item of arr) {
