@@ -9,7 +9,7 @@
 }
 
 {
-  let arr = [1, 2, 'a', 4, 5, 6, '7', 'a', 7, 8, 9, 0]
+  let arr = [-0, 'NaN', 'NaN', 2, 'a', 4, 5, 6, '7', 'a', 7, 8, 9, +0]
   let list = new Set(arr);
   console.log(list)
 }
@@ -83,7 +83,7 @@
 {
   let map = new WeakMap();
 
-  let a={};
-  map.set(a,123);
+  let a = {};
+  map.set(a, 123);
   console.log(map.get(a))
 }
