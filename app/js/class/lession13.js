@@ -3,6 +3,7 @@
   let ajax = function (back) {
     console.log('start!');
     setTimeout(() => {
+      console.log('middle...');
       back && back.call()
     }, 3000);
   }

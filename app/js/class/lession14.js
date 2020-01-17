@@ -43,3 +43,14 @@
     console.log('value',value);
   }
 }
+
+
+{
+  let set = new Set().add('a').add('b').add('c');
+console.log(set);
+let [x,y] = set;
+// x='a'; y='b'
+console.log([x,y]);
+let [first, ...rest] = set;
+console.log([first,rest]);
+}
